@@ -16,7 +16,7 @@ Modo de uso: `molinete.py <wordlist> <hash>`
 A ferramenta lê o hash fornecido e, inteligentemente, identifica o tipo de "peixe" que está na rede.
 
 1. Modo Automático: Se o hash segue o padrão Unix (com os separadores $), o programa o divide automaticamente em ID, Salt e Hash. Ele reconhece desde o clássico MD5 até o pesado Bcrypt ($2a$, $2b$), que antes passava direto pela rede.
-2. Modo Salt Externo: Para aqueles casos onde o Salt não vem grudado no hash (comum em dumps de SQL), adicionei o parâmetro --salt. Assim, o programa concatena o salt especificado com cada senha da lista para gerar o hash SHA-256 correspondente e comparar os resultados.
+2. Modo Salt Externo: Para aqueles casos onde o Salt não vem grudado no hash (comum em dumps de SQL), adicionei o parâmetro `--salt`. Assim, o programa concatena o salt especificado com cada senha da lista para gerar o hash SHA-256 correspondente e comparar os resultados.
 
 ![Explicações-Molinete1](https://github.com/user-attachments/assets/38c9ace6-05f4-4a90-8af1-570c4a80680b)
 
@@ -28,7 +28,7 @@ O Molinete se baseia na biblioteca passlib e no módulo hashlib, permitindo lida
 
 Para tornar o processo menos tedioso, mantive a interface visual, mas agora com um toque de Verde para facilitar a leitura no escuro do terminal. A animação de "Fisgando" mantém você informado sobre qual senha está passando pelo anzol em tempo real, sem bloquear a execução principal, graças à arquitetura de processos paralelos.
 
-Para os marinheiros de primeira viagem, os parâmetros -h ou --help mostram o manual completo de como operar a ferramenta.
+Para os marinheiros de primeira viagem, os parâmetros `-h` ou `--help` mostram o manual completo de como operar a ferramenta.
 
 # Disclaimer
 
